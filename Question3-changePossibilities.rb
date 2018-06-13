@@ -10,7 +10,7 @@
 # 1¢, 3¢
 # 2¢, 2¢
 
-def changePossibilities(amount, denominations, temp=[])
+def changePossibilities(amount, denominations, temp=[], counter = 0)
 	x = temp.reduce(:+)
 
 	if x == amount
@@ -24,7 +24,7 @@ def changePossibilities(amount, denominations, temp=[])
 	for i in (0..(denominations.length - 1)) do
 		y = denominations[i]
 		remain = denominations.drop(i + 1)
-		changePossibilities(remain, denominations, temp + [y] )
+		changePossibilities(remain, denominations, temp + [y], counter = counter)
 	end
 	p counter
 end
