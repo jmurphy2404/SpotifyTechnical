@@ -5,3 +5,10 @@
 
 # For s = "4[ab]", the output should be decodeString(s) = "abababab"
 # For s = "2[b3[a]]", the output should be decodeString(s) = "baaabaaa"
+
+def decodeString(s)
+
+end
+
+p decodeString("4[ab]")
+p decodeString("2[b3[a]]")
