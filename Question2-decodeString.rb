@@ -7,7 +7,7 @@
 # For s = "2[b3[a]]", the output should be decodeString(s) = "baaabaaa"
 
 def decodeString(s)
-
+	
 end
 
 p decodeString("4[ab]")
