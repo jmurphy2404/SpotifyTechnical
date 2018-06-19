@@ -7,8 +7,20 @@
 # For s = "2[b3[a]]", the output should be decodeString(s) = "baaabaaa"
 
 def decodeString(s)
-	
+	x = s.gsub(/(\w*)(\d)\[(\w*)\]/) { |y| scanner(y) }
+	scanner(x).empty? ? x : scanner(x)
+end
+
+def scanner(z)
+    arr = z.scan(/(\w*)(\d)\[(\w*)\]/)
+    arr.map do |a|
+	    b = a.pop
+	    c = a.pop.to_i
+	    array.push(b * c)
+	 end
+	 arr.flatten.join('')
 end
 
 p decodeString("4[ab]")
 p decodeString("2[b3[a]]")
+p decodeString("2[a3[b2[a]]]")
